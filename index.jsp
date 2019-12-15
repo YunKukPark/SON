@@ -20,49 +20,49 @@
 	<body>
 		<% 
 			memberVO vo = (memberVO) session.getAttribute("vo");
-			// System.out.println("í˜„ìž¬ ë¡œê·¸ì¸í•œ ì‚¬ëžŒ : " + vo.getEmail());
+			// System.out.println("ÇöÀç ·Î±×ÀÎÇÑ »ç¶÷ : " + vo.getEmail());
 		%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>ë°•ìœ¤êµ­</strong></a>
+						<a href="index.html" class="logo"><strong>¹ÚÀ±±¹</strong></a>
 						<nav>
 							<%if(vo==null) {%>
-								<a href="#menu">ë¡œê·¸ì¸</a>
+								<a href="#menu">·Î±×ÀÎ</a>
 							<%} else { %>
-								<a href="Logout.do">ë¡œê·¸ì•„ì›ƒ</a>
-								<a href="update.jsp">íšŒì›ì •ë³´ìˆ˜ì •</a>
+								<a href="Logout.do">·Î±×¾Æ¿ô</a>
+								<a href="update.jsp">È¸¿øÁ¤º¸¼öÁ¤</a>
 								<%if(vo.getID().equals("admin")) {%>
-									<a href="selectMember.jsp">íšŒì›ê´€ë¦¬íŽ˜ì´ì§€</a>
+									<a href="selectMember.jsp">È¸¿ø°ü¸®ÆäÀÌÁö</a>
 								<%} %>
 							<%} %>							
-							<!-- ë¡œê·¸ì¸ í›„ Logout.jspë¡œ ì´ë™í•  ìˆ˜ ìžˆëŠ”'ë¡œê·¸ì•„ì›ƒ'ë§í¬ì™€ 'ê°œì¸ì •ë³´ìˆ˜ì •'ë§í¬ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤. -->
+							<!-- ·Î±×ÀÎ ÈÄ Logout.jsp·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Â'·Î±×¾Æ¿ô'¸µÅ©¿Í '°³ÀÎÁ¤º¸¼öÁ¤'¸µÅ©¸¦ Ãâ·ÂÇÏ½Ã¿À. -->
 						</nav>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">	
 						<ul class="links">
-							<li><h5>ë¡œê·¸ì¸</h5></li>
+							<li><h5>·Î±×ÀÎ</h5></li>
 								<form action="Login.do" method="post">
-									<li><input type="text" name="id" placeholder="IDë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="password" name="pw" placeholder="PWë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
+									<li><input type="text" name="id" placeholder="ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="password" name="pw" placeholder="PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
 								</form>
 							
 							
 						</ul>
 						<ul class="actions vertical">
-							<li><h5>íšŒì›ê°€ìž…</h5></li>
+							<li><h5>È¸¿ø°¡ÀÔ</h5></li>
 								<form action="Join.do" method="post">
-									<li><input type="text" name="id" placeholder="IDë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="password" name="pw" placeholder="PWë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="text" name="age" placeholder="ë‚˜ì´ëŒ€ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="text" name="sex" placeholder="ì„±ë³„ì„ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="text" name="hp" placeholder="ì „í™”ë²ˆí˜¸ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
-									<li><input type="text" name="alergy" placeholder="ì•ŒëŸ¬ì§€ì •ë³´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></li>
+									<li><input type="text" name="id" placeholder="ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="password" name="pw" placeholder="PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="text" name="age" placeholder="³ªÀÌ´ë¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="text" name="sex" placeholder="¼ºº°À» ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="text" name="hp" placeholder="ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
+									<li><input type="text" name="alergy" placeholder="¾Ë·¯ÁöÁ¤º¸¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
 									<li><input type="submit" value="JoinUs" class="button fit"></li>
 								</form>
 						</ul>
@@ -74,15 +74,15 @@
 									<%if(vo==null) { %>
 										<h1>New Smart Ordering System SON</h1>
 									<%} else { %>
-										<h1><%=vo.getID() %> ë‹˜<br>í™˜ì˜í•©ë‹ˆë‹¤.</h1>
+										<h1><%=vo.getID() %> ´Ô<br>È¯¿µÇÕ´Ï´Ù.</h1>
 									<%} %>
-								<!-- ë¡œê·¸ì¸ í›„ ë¡œê·¸ì¸ í•œ ì‚¬ìš©ìžì˜ ì„¸ì…˜ì•„ì´ë””ë¡œ ë°”ê¾¸ì‹œì˜¤.
-									 ex)smartë‹˜ í™˜ì˜í•©ë‹ˆë‹¤ -->
+								<!-- ·Î±×ÀÎ ÈÄ ·Î±×ÀÎ ÇÑ »ç¿ëÀÚÀÇ ¼¼¼Ç¾ÆÀÌµð·Î ¹Ù²Ù½Ã¿À.
+									 ex)smart´Ô È¯¿µÇÕ´Ï´Ù -->
 							</header>
 							<div class="content">
-								<p>Sonì— ëŒ€í•œ ê°„ëžµí•œ ì†Œê°œê¸€ ì“°ê¸°<br></p>
+								<p>Son¿¡ ´ëÇÑ °£·«ÇÑ ¼Ò°³±Û ¾²±â<br></p>
 								<ul class="actions">
-									<li><a href="#menu" class="button fit">ì‹œìž‘í•˜ê¸°</a></li>
+									<li><a href="#menu" class="button fit">½ÃÀÛÇÏ±â</a></li>
 								</ul>
 							</div>
 						</div>
